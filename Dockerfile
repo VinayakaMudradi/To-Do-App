@@ -2,8 +2,8 @@ FROM node:alpine
 
 WORKDIR /usr/src/app
 
-#COPY package.json .
-#COPY package-lock.json .
+COPY code/package.json .
+COPY code/package-lock.json .
 
 RUN npm install
 
