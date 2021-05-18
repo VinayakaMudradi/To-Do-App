@@ -26,7 +26,7 @@ describe('workspace-project App', () => {
     await element(by.css('app-root .task-field')).sendKeys('Complete Assignments');
     await element(by.css('.add-task')).click();
     // await browser.sleep(5000);
-    expect(await element(by.css('.mat-card-content')).getText()).toEqual('Complete Assignments');
+    expect(await element(by.css('.mat-card-content')).getText()).toEqual('Complete Assignment');
     
     expect(await element.all(by.css('.mat-card-content')).count()).toEqual(1);
     
