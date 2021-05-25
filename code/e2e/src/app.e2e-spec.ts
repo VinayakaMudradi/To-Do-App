@@ -29,12 +29,8 @@ describe('workspace-project App', () => {
     expect(await element(by.css('.mat-card-content')).getText()).toEqual('Complete Assignments');
     
     expect(await element.all(by.css('.mat-card-content')).count()).toEqual(1);
-    
-
-    // page.navigateTo();
-    // page.getInputText().sendKeys('Complete Assignments');
-    // page.getAddTaskButton().click()
-    // expect<any>(page.getCardContent().getText()).toEqual("Complete Assignment")
+    await element(by.css('.delete')).click();
+    expect(await element.all(by.css('.mat-card-content')).count()).toEqual(0);
   })
 
 
